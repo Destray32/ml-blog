@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://destray32.github.io/ml-blog/sitemap-index.xml
+Host: https://destray32.github.io
