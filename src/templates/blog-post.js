@@ -1,7 +1,17 @@
 import React, { useEffect } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
+import styled from 'styled-components';
 
 import Header from '../components/header';
+
+const MarkdownContent = styled.div`
+  img {
+    max-width: 60%;
+    height: auto;
+  }
+`;
+
+
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
@@ -24,7 +34,7 @@ export default function BlogPost({ data }) {
 
       }>
         <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }}></MarkdownContent>
       </div>
     </>
   )

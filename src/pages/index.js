@@ -2,9 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+`;
+
 export default function Home({ data }) {
   return (
     <Layout>
+    <GlobalStyle />
       <h1>My Blog</h1>
       <ul>
         {data.allMarkdownRemark.edges.map(({ node }) => (

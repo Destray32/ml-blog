@@ -55,5 +55,7 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
   ],
 }
